@@ -1,0 +1,80 @@
+Git Setup and GitHub Integration Guide
+======================================
+
+1. Git Setup
+------------
+
+Before using Git, configure your identity so your commits are properly labeled.
+
+Steps:
+
+1. Open Command Prompt (CMD):  
+   - Press Win + R, type cmd, and press Enter.
+
+2. Set your Git username:  
+   git config --global user.name "Your Name"  
+   (Replace "Your Name" with your actual name.)
+
+3. Set your Git email:  
+   git config --global user.email yourname@example.com  
+   (Replace yourname@example.com with your email address, matching your GitHub email.)
+
+---
+
+2. SSH Key Creation
+-------------------
+
+SSH keys allow secure, passwordless connections to GitHub.
+
+Steps:
+
+1. Open Command Prompt (CMD):  
+   - Press Win + R, type cmd, and press Enter.
+
+2. Generate a new SSH key:  
+   ssh-keygen -t rsa -b 4096 -C "your_email@example.com"  
+   (Replace "your_email@example.com" with your GitHub email.)  
+   - Press Enter to accept the default file location.  
+   - Optionally, set a passphrase for extra security.
+
+3. Locate your SSH key:  
+   - Go to: C:\\Users\\<YourUsername>\\.ssh  
+   - Find the file named id_rsa.pub.
+
+4. Copy your SSH public key:  
+   - Open id_rsa.pub with Notepad.  
+   - Copy all the text.
+
+5. Add your SSH key to GitHub:  
+   - Go to https://github.com  
+   - Click your profile picture → Settings  
+   - Click SSH and GPG keys in the sidebar  
+   - Click New SSH key  
+   - Enter a title (e.g., "My Laptop SSH Key")  
+   - Paste your SSH key into the "Key" field  
+   - Click Add SSH key
+
+---
+
+3. Adding a GitHub Project in VS Code
+-------------------------------------
+
+Clone a GitHub repository into VS Code using SSH.
+
+Steps:
+
+1. Get the SSH URL of your repository:  
+   - Go to your repository on GitHub  
+   - Click the green Code button  
+   - Select SSH and copy the SSH URL (e.g., git@github.com:username/repo.git)
+
+2. Open Visual Studio Code.
+
+3. Clone the repository:  
+   - Press Ctrl + Shift + P to open the Command Palette  
+   - Type Git: Clone and select it  
+   - Paste the SSH URL and press Enter  
+   - Choose a folder to save the project
+
+4. Open the project:  
+   - After cloning, VS Code will prompt you to open the repository. Click Open
