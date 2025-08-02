@@ -57,6 +57,3 @@ To run the tests, execute:
 
 You can configure the application by modifying the `src/main/resources/application.properties` file. 
 
-## License
-
-This project is licensed under the MIT License.
